@@ -1,2 +1,7 @@
 from flask import Flask
-print("Stop")
+app=Flask(__name__)
+@app.route("/")
+def do():
+  return("Hello world")
+
+app.run(host="0.0.0.0",debug=True)
